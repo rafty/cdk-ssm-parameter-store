@@ -3,11 +3,11 @@
 #         assertions
 #     )
 
-# from cdk_ssm_parameter_store.cdk_ssm_parameter_store_stack import CdkSsmParameterStoreStack
+# from _stacks.cdk_ssm_parameter_store_stack import CdkSsmParameterStoreStack
 
 
 # example tests. To run these tests, uncomment this file along with the example
-# resource in cdk_ssm_parameter_store/cdk_ssm_parameter_store_stack.py
+# resource in _stacks/ssm_parameter_store_stack.py
 def test_sqs_queue_created():
 #     app = core.App()
 #     stack = CdkSsmParameterStoreStack(app, "cdk-ssm-parameter-store")
