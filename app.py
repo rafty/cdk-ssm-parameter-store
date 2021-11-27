@@ -10,7 +10,9 @@ environment = cdk.Environment(
 )
 
 app = cdk.App()
-SsmParameterStoreStack(app, 'CdkSsmParameterStoreStack', env=environment)
-TestReadParameterStack(app, 'GetValueFromSsmParameterStoreStack', env=environment)
+
+ssm_stack = SsmParameterStoreStack(app, 'CdkSsmParameterStoreStack', env=environment)
+test_stack = TestReadParameterStack(app, 'GetValueFromSsmParameterStoreStack', env=environment)
+test_stack.add_dependency(ssm_stack)
 
 app.synth()
