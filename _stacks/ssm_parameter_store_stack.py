@@ -1,5 +1,3 @@
-# from aws_cdk import core as cdk
-# import aws_cdk as cdk
 from aws_cdk import Stack
 from constructs import Construct
 from _constructs.ssm_parameter_construct import SsmStringParameter
