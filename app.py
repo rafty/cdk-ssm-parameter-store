@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import os
-from aws_cdk import core as cdk
+import aws_cdk as cdk
 from _stacks.ssm_parameter_store_stack import SsmParameterStoreStack
 from _stacks.ssm_parameter_read_stack import TestReadParameterStack
 

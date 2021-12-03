@@ -1,10 +1,10 @@
-from aws_cdk import core as cdk
 from aws_cdk import aws_ssm
+from constructs import Construct
 
 
-class SsmStringParameter(cdk.Construct):
+class SsmStringParameter(Construct):
     def __init__(self,
-                 scope: cdk.Construct,
+                 scope: Construct,
                  id: str,
                  parameter_name: str,
                  string_value: str,
@@ -21,9 +21,9 @@ class SsmStringParameter(cdk.Construct):
         )
 
 
-class StringListParameter(cdk.Construct):
+class StringListParameter(Construct):
     def __init__(self,
-                 scope: cdk.Construct,
+                 scope: Construct,
                  id: str,
                  parameter_name: str,
                  string_list_value: list,

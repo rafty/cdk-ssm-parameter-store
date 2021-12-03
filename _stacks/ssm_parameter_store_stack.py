@@ -1,11 +1,14 @@
-from aws_cdk import core as cdk
+# from aws_cdk import core as cdk
+# import aws_cdk as cdk
+from aws_cdk import Stack
+from constructs import Construct
 from _constructs.ssm_parameter import SsmStringParameter
 from _constructs.ssm_parameter import StringListParameter
 
 
-class SsmParameterStoreStack(cdk.Stack):
+class SsmParameterStoreStack(Stack):
 
-    def __init__(self, scope: cdk.Construct, construct_id: str, **kwargs) -> None:
+    def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
         SsmStringParameter(

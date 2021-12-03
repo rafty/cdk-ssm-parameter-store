@@ -1,11 +1,12 @@
-from aws_cdk import core as cdk
-from aws_cdk import aws_ssm
 import json
+import aws_cdk as cdk
+from constructs import Construct
+from aws_cdk import aws_ssm
 
 
 class TestReadParameterStack(cdk.Stack):
 
-    def __init__(self, scope: cdk.Construct, construct_id: str, **kwargs) -> None:
+    def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
         email = aws_ssm.StringParameter.value_for_string_parameter(
